@@ -31,7 +31,7 @@
           "Authorization": "Bearer " + SUPABASE_ANON_KEY,
           "Prefer": "return=minimal",
         },
-        body: JSON.stringify({ name, score, verdict, dietary: dietary || "None" }),
+        body: JSON.stringify({ name, score, verdict, dietary: dietary || "None", answers: answers }),
       });
       if (!res.ok) throw new Error("Failed to save");
     }
@@ -121,7 +121,7 @@
         if (!selected || animating) return;
         const q = questions[current];
         const opt = q.options.find(o => o.value === selected);
-        const newAnswers = { ...answers, [q.id]: { score: opt.score, label: opt.label } };
+        const newAnswers = { ...answers, [q.question]: opt.label };
         setAnswers(newAnswers);
         if (current + 1 < total) {
           setAnimating(true);
@@ -130,13 +130,12 @@
       };
 
       const handleSubmit = async () => {
-        const score = Object.values(answers).reduce((a, b) => a + b.score, 0);
+        const scoreMap = {};
+        questions.forEach(q => { const sel = q.options.find(o => o.label === answers[q.question]); if(sel) scoreMap[q.id] = sel.score; });
+        const score = Object.values(scoreMap).reduce((a, b) => a + b, 0);
         const result = results.find(r => score >= r.minScore);
         setFinalResult({ ...result, score });
-        const readableAnswers = {};
-        questions.forEach(q => {
-          if (answers[q.id]) readableAnswers[q.question] = answers[q.id].label;
-        });
+        
         setSaving(true);
         try { await saveApplication(name, score, result.verdict, dietary.trim(), readableAnswers); }
         catch (e) { setSaveError(true); }
