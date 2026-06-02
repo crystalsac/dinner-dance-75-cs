@@ -37,55 +37,55 @@
     }
 
     const questions = [
-      { id: 1, emoji: "💃", question: "Dancing is happening. Your involvement level is:", options: [
+      { id: 1, emoji: "💃", question: "It's a dinner DANCE..so what's your involvement level:", options: [
         { value: "a", label: "I WILL be on that dance floor & I will NOT be stopped", score: 5 },
         { value: "b", label: "I'll dance if dragged. Won't be pretty but I'll commit.", score: 4 },
-        { value: "c", label: "Seated enthusiastic supporter. Excellent clapper.", score: 3 },
+        { value: "c", label: "I'm more of an enthusiastic supporter. Will cheer others on.", score: 3 },
         { value: "d", label: "I will watch others dance with the energy of a proud parent", score: 3 },
       ]},
       { id: 2, emoji: "📸", question: "Someone points a camera at us. You:", options: [
-        { value: "a", label: "Strike a pose, I've been practising since 9am that morning.", score: 5 },
-        { value: "b", label: "Dive behind something. I don't do photos, I'm a vampire.", score: 3 },
+        { value: "a", label: "Strike a pose, I've been practicing since 9am that morning.", score: 5 },
+        { value: "b", label: "Dive behind something. I don't do photos, I'm a vampire.", score: 2 },
         { value: "c", label: "Probs make a face that will haunt everyone for the next 75 years.", score: 4 },
-        { value: "d", label: "I won't be in the shot but I can help others get Vogue ready.", score: 4 },
+        { value: "d", label: "I won't be in the shot but I can help others get "Vogue" ready.", score: 3 },
       ]},
       { id: 3, emoji: "🎵", question: "A banger comes on. You:", options: [
-        { value: "a", label: "Scream 'THIS IS MY SONG' — even if it's not your song", score: 5 },
-        { value: "b", label: "Do a dignified seated chair-bop. Controlled. Powerful.", score: 3 },
-        { value: "c", label: "Give the table a full run down of the artist & a fun fact. You're welcome.", score: 3 },
-        { value: "d", label: "Immediately run to the dance floor.", score: 5 },
+        { value: "a", label: "Scream 'THIS IS MY SONG'... even if it's not your song", score: 5 },
+        { value: "b", label: "Do a dignified seated chair-bop. Controlled. Powerful.", score: 2 },
+        { value: "c", label: "Give the table a full run down of the artist & a fun fact.", score: 2 },
+        { value: "d", label: "You immediately run to the dance floor.", score: 5 },
       ]},
       { id: 4, emoji: "🫤", question: "You spot my most awkward coworker heading straight for us. You:", options: [
         { value: "a", label: "Smoothly intercept with a compliment about their outfit", score: 5 },
         { value: "b", label: "Pretend we're mid a very important conversation. Very serious.", score: 4 },
-        { value: "c", label: "I genuinely enjoy talking to everyone. (Extrovert energy.)", score: 3 },
+        { value: "c", label: "I genuinely enjoy talking to everyone. (Extrovert energy.)", score: 5 },
         { value: "d", label: "I give you the look. You know the look. We're already moving.", score: 5 },
       ]},
       { id: 5, emoji: "🥂", question: "It's a dinner, it's a dance but there's only soft drinks*", questionSub: "*pretty sure drinks are an additional cost on you. soz.", options: [
         { value: "a", label: "No problem, I brought my own fun (it's called my personality)", score: 5 },
         { value: "b", label: "Genuinely fine. Sparkling water in a nice glass still slaps.", score: 4 },
-        { value: "c", label: "Stare into the middle distance for 30 seconds then rally heroically", score: 4 },
-        { value: "d", label: "File a formal complaint with the event committee. In writing.", score: 3 },
+        { value: "c", label: "Stare into the middle distance for 30 seconds wondering why you came", score: 2 },
+        { value: "d", label: "File a formal complaint with the event committee. In writing.", score: 1 },
       ]},
       { id: 6, emoji: "🏆", question: "There's a raffle & a silent auction. Your move*", questionSub: "*(ps none of the below is required, just curious)", options: [
-        { value: "a", label: "I will win the raffle through sheer force of positive thinking", score: 4 },
+        { value: "a", label: "I'm defs going to enter the raffle", score: 4 },
         { value: "b", label: "I'm in for the silent auction.", score: 5 },
-        { value: "c", label: "I'm raffling, I'm being silent for the auctions, I'm going home with something.", score: 5 },
-        { value: "d", label: "I came for the free food, if I'm being honest.", score: 3 },
+        { value: "c", label: "I'm raffling, I'm being silent for the auctions, I'm probs gonna win something.", score: 5 },
+        { value: "d", label: "I came for the free food, sorry not sorry.", score: 2 },
       ]},
       { id: 7, emoji: "🕙", question: "It's a 6:30–10pm event. At 9:45 you are:", options: [
         { value: "a", label: "I've been trying to say goodbye for 45 minutes. It's not going well.", score: 5 },
         { value: "b", label: "On the dance floor. 15 minutes left & I am using every single one.", score: 5 },
         { value: "c", label: "Already halfway to the door. Bye.", score: 3 },
-        { value: "d", label: "I'm asking if there's an afterparty.", score: 4 },
+        { value: "d", label: "I'm asking if there's an afterparty.", score: 3 },
       ]},
     ];
 
     const results = [
-      { minScore: 28, verdict: "HIRED", color: "#ff6bbd", title: "Okay you actually have potential", description: "Not going to lie, you smashed it. This is looking very promising & I am not not excited. No spoilers on what I decide but just know, I'll get back to you super soon! Thank you so much for applying." },
+      { minScore: 28, verdict: "HIRED", color: "#ff6bbd", title: "Okay you actually have potential", description: "Not going to lie, you smashed it. This is looking very promising... I'll get back to you superrr soon!" },
       { minScore: 20, verdict: "SHORTLISTED", color: "#f9a8d4", title: "Shortlisted, babe", description: "You've got good energy & I respect it. You have been shortlisted. I'll get back to you ASAP 🌸" },
-      { minScore: 13, verdict: "WAITLISTED", color: "#fbbf24", title: "On the waitlist", description: "I believe in you, I really do. But the formal written complaint about the soft drinks situation was a choice. You've been waitlisted. Growth is possible. I'm rooting for you." },
-      { minScore: 0, verdict: "REJECTED", color: "#fb923c", title: "Not this time, babe", description: "We admire the honesty. Coming solely for the two-course meal is a genuine answer but not the vibe we're going for. We will not be progressing your application at this time. You are still a great person." },
+      { minScore: 13, verdict: "WAITLISTED", color: "#fbbf24", title: "On the waitlist", description: "I believe in you, I realllly do - you've got strong potential - You've been waitlisted. Growth is possible. I'll get back to ya" },
+      { minScore: 0, verdict: "REJECTED", color: "#fb923c", title: "Not this time, babe", description: "We admire the honesty but not the vibe I'm going for. We will not be progressing your application at this time. Thanks for applying though :)." },
     ];
 
     function App() {
